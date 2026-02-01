@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>QUI SUIS-JE ?</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+	<header id="header" class="hero-header2"
+        style="background-image: url('images/monfond2.jpg');">
+    <div class="hero-content2">
+        <h1 class="hero-title2">QUI SUIS-JE ?</h1>
+
+        <ul class="actions">
+            <li><a href="index.html" class="button hero-button">Retour</a></li>
+        </ul>
+    </div>
+</header>
+
+
+<!-- Main -->
+<div id="main">
+
+<!-- Content -->
+<section id="content" class="main">
+
+    <!-- Études -->
+    <h2 class="title-icon-right">
+        Mes études :
+    </h2>
+
+    <p>Je suis actuellement étudiante en Techniques de Commercialisation, une formation universitaire professionnalisante qui m’apporte une vision globale et concrète du fonctionnement de l’entreprise, en particulier dans les domaines du marketing, de la vente, de la communication commerciale et de la relation client. Ce cursus me permet de développer à la fois des compétences théoriques (analyse de marché, stratégie commerciale, comportement du consommateur, politique de prix, techniques de négociation) et des compétences opérationnelles, directement applicables en entreprise.</p>
+  
+
+    <!-- Vie professionnelle -->
+    <h2 class="title-icon-right">
+        Mon projet professionnel :</h2>
+
+    <p>Dans le cadre de cette formation, j’ai choisi de suivre mon parcours en alternance, afin de confronter les enseignements académiques à la réalité du terrain. J’effectue ainsi mon alternance chez Leroy Merlin, en tant que conseillère de vente au rayon électricité et plomberie. Cette expérience constitue un véritable pilier de mon projet professionnel, car elle me permet d’évoluer dans un environnement dynamique, orienté client et fortement axé sur le conseil et la performance commerciale.
+Au quotidien, mon rôle consiste à accueillir, conseiller et accompagner les clients dans leurs projets, qu’il s’agisse de travaux de rénovation, d’installation ou de dépannage. Je dois analyser précisément leurs besoins, leur niveau de connaissance et leurs contraintes afin de leur proposer des solutions adaptées, tant sur le plan technique que budgétaire. Cette fonction m’a permis de développer un sens aigu du service client, une grande capacité d’écoute ainsi qu’une aisance relationnelle essentielle dans les métiers du commerce.</p>
+
+             
+  <h2 class="title-icon-right"> Personnel – La danse </h2>
+<p>En parallèle de mes études, je pratique la danse, une activité qui m’apporte beaucoup sur le plan personnel et professionnel. Elle m’aide à développer la confiance en moi, l’aisance à l’oral, la gestion du stress et l’expression corporelle. Ces compétences sont très utiles dans le commerce, notamment pour le contact client, la posture professionnelle et la communication.</p>
+
+<!-- Galerie photo défilante personnalisée -->
+<div class="wrap-card1">
+  <div style="display:flex;align-items:center">
+    <div class="controls-card1" style="margin-left:auto">
+    </div>
+  </div>
+
+  <div class="gallery-card1" id="gallery-card1" tabindex="0">
+    <figure class="card1"><img src="images/image1.png"><figcaption class="caption-card1"><span class="label-card1">La légende d'Abelia</span><span class="meta-card1"></span></figcaption></figure>
+    <figure class="card1"><img src="images/image2.png"><figcaption class="caption-card1"><span class="label-card1">Lycall</span><span class="meta-card1"></span></figcaption></figure>
+    <figure class="card1"><img src="images/image3.png"><figcaption class="caption-card1"><span class="label-card1">Alégria</span><span class="meta-card1"></span></figcaption></figure>
+    <figure class="card1"><img src="images/image5.png"><figcaption class="caption-card1"><span class="label-card1">The greatest showman</span><span class="meta-card1"></span></figcaption></figure>
+</div>
+
+<script>
+  const galleryCard1 = document.getElementById('gallery-card1');
+  const prevCard1 = document.getElementById('prev-card1');
+  const nextCard1 = document.getElementById('next-card1');
+  const playCard1 = document.getElementById('play-card1');
+
+  let autoCard1 = false;
+  let autoIdCard1 = null;
+  const stepCard1 = 340;
+
+  function scrollToNextCard1(){ galleryCard1.scrollBy({left: stepCard1, behavior: 'smooth'}); }
+  function scrollToPrevCard1(){ galleryCard1.scrollBy({left: -stepCard1, behavior: 'smooth'}); }
+
+  prevCard1.addEventListener('click', scrollToPrevCard1);
+  nextCard1.addEventListener('click', scrollToNextCard1);
+
+  function startAutoCard1(){
+    if(autoIdCard1) return;
+    autoCard1 = true;
+    playCard1.textContent = '❚❚';
+    autoIdCard1 = setInterval(()=>{
+      if(galleryCard1.scrollLeft + galleryCard1.clientWidth >= galleryCard1.scrollWidth - 10){
+        galleryCard1.scrollTo({left:0, behavior:'smooth'});
+      } else {
+        galleryCard1.scrollBy({left: stepCard1, behavior:'smooth'});
+      }
+    }, 2400);
+  }
+
+  function stopAutoCard1(){
+    autoCard1 = false;
+    playCard1.textContent = '►';
+    clearInterval(autoIdCard1);
+    autoIdCard1 = null;
+  }
+
+  playCard1.addEventListener('click', ()=>{ autoCard1 ? stopAutoCard1() : startAutoCard1(); });
+</script>
+</div>
+</section>
+</div>
+
+<!-- Footer -->
+
+             <footer id="footer">
+  <section>
+    <h2>À propos de moi</h2>
+    <p>Curieuse par nature, je m’investis pleinement dans ce que j’entreprends et je prends plaisir à transformer des idées en projets concrets. Que ce soit seule ou en équipe, j’avance avec sérieux, enthousiasme et sens des responsabilités. Toujours en quête d’apprentissage, je cherche à progresser, à tester de nouvelles façons de faire et à évoluer constamment.</p>
+
+  <ul class="icons">
+  <li>
+    <a href="https://www.linkedin.com/in/carla-torres-728806359/" class="icon brands fa-linkedin alt">
+      <span class="label">LinkedIn</span>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.instagram.com/carlato2res/" class="icon brands fa-instagram alt">
+      <span class="label">Instagram</span>
+    </a>
+  </li>
+</ul>
+
+  </section>
+
+  <section>
+    <h2>Mes coordonnées</h2>
+    <dl class="alt">
+
+    <dt>Naissance</dt>
+      <dd>5 Octobre 2006</dd>
+
+      <dt>Adresse</dt>
+      <dd>120 avenue du professeur emile jeanbrau<br>34090 Montpellier</dd>
+
+      <dt>Téléphone</dt>
+      <dd>06 48 31 47 31 </dd>
+
+      <dt>Email</dt>
+      <dd><a href="mailto:c.torres06@icloud.com">c.torres06@icloud.com</a></dd>
+
+      <dt>Permis</dt>
+      <dd>Permis B</dd>
+    </dl>
+  </section>
+
+  <p class="copyright">
+    &copy; 2025 Torres Carla. Design basé sur un modèle de <a href="https://html5up.net" target="_blank">HTML5 UP</a>.
+  </p>
+
+</footer>
+      </div>
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
